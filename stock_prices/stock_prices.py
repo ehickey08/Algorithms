@@ -15,8 +15,6 @@ def find_max_profit(prices):
 
     return max_profit
 
-prices = [100,90,80,70,50, 10]
-find_max_profit(prices)
 
 if __name__ == '__main__':
     # This is just some code to accept inputs from the command line
