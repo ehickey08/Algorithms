@@ -7,7 +7,8 @@ import sys
 # a solution that is more efficient than the naive 
 # recursive solution
 def eating_cookies(n, cache={}):
-    if n <= 1: return 1
+    if n <= 1:
+        return 1
     if n not in cache:
         count = 0
         for i in range(1, 4):
