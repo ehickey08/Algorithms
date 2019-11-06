@@ -18,6 +18,7 @@ def rock_paper_scissors(n):
     add_move(moves, [])
     return moves
 
+print(rock_paper_scissors(2))
 print(rock_paper_scissors(5))
 if __name__ == "__main__":
     if len(sys.argv) > 1:

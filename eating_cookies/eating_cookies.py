@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import sys
-
+import time
 
 # The cache parameter is here for if you want to implement
 # a solution that is more efficient than the naive 
@@ -17,8 +17,16 @@ def eating_cookies(n, cache={}):
         cache[n] = count
     return cache[n]
 
+def eat_two(n):
+    if n == 0:
+        return 1
+    cache = [1, 2, 4]
+    if n < 3:
+        return cache[n - 1]
+    for i in range(3, n):
+        cache.append(cache[i - 1] + cache[i - 2] + cache[i - 3])
+    return cache[n - 1]
 
-print(eating_cookies(50))
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
