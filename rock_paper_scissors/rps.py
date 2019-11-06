@@ -2,6 +2,7 @@
 
 import sys
 
+
 def rock_paper_scissors(n):
     def add_move(moves, move):
         if len(move) == n:
@@ -12,7 +13,6 @@ def rock_paper_scissors(n):
             new_play = move[:]
             new_play.append(option)
             add_move(moves, new_play)
-
 
     moves = []
     add_move(moves, [])
