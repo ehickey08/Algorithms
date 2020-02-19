@@ -4,7 +4,7 @@ import sys
 import time
 
 # The cache parameter is here for if you want to implement
-# a solution that is more efficient than the naive 
+# a solution that is more efficient than the naive
 # recursive solution
 def eating_cookies(n, cache={}):
     if n <= 1:
@@ -17,7 +17,7 @@ def eating_cookies(n, cache={}):
         cache[n] = count
     return cache[n]
 
-def eat_two(n):
+def eating_cookies_fast(n):
     if n == 0:
         return 1
     cache = [1, 2, 4]
@@ -27,6 +27,7 @@ def eat_two(n):
         cache.append(cache[i - 1] + cache[i - 2] + cache[i - 3])
     return cache[n - 1]
 
+print(eating_cookies(100))
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
@@ -36,3 +37,33 @@ if __name__ == "__main__":
                 ways=eating_cookies(num_cookies), n=num_cookies))
     else:
         print('Usage: eating_cookies.py [num_cookies]')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
