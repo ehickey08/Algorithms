@@ -15,6 +15,7 @@ def find_max_profit(prices):
 
     return max_profit
 
+print(find_max_profit([10, 50, 5, 45, 5, 100, 0]))
 
 if __name__ == '__main__':
     # This is just some code to accept inputs from the command line

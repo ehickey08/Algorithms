@@ -18,6 +18,24 @@ def rock_paper_scissors(n):
     add_move(moves, [])
     return moves
 
+def rock_paper_scissors_iterative(n):
+  output = []
+  possible_plays = ['scissors', 'paper', 'rock']
+
+  stack = []
+  stack.append([])
+
+  while len(stack) > 0:
+    hand = stack.pop()
+
+    if n == 0 or len(hand) == n:
+      output.append(hand)
+    else:
+      for play in possible_plays:
+        stack.append(hand + [play])
+
+  return output
+
 def rock_paper_scissors_slower(n):
     def add_move(moves):
         multiplied_moves = [move for move in moves for i in range(3)]
