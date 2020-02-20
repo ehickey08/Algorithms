@@ -35,7 +35,19 @@ def rock_paper_scissors_iterative(n):
         stack.append(hand + [play])
 
   return output
+trials = 50
+hands = 13
+start = time.time()
+for i in range(trials):
+    rock_paper_scissors_iterative(hands)
+end = time.time()
+print(end-start)
 
+start = time.time()
+for i in range(trials):
+    rock_paper_scissors(hands)
+end = time.time()
+print(end-start)
 def rock_paper_scissors_slower(n):
     def add_move(moves):
         multiplied_moves = [move for move in moves for i in range(3)]
