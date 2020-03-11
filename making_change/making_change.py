@@ -36,3 +36,6 @@ if __name__ == "__main__":
             ways=making_change(amount, denominations), amount=amount))
     else:
         print("Usage: making_change.py [amount]")
+
+
+print(making_change(3, [2]))

@@ -35,17 +35,27 @@ def rock_paper_scissors_iterative(n):
         stack.append(hand + [play])
 
   return output
-trials = 50
-hands = 13
-start = time.time()
-for i in range(trials):
-    rock_paper_scissors_iterative(hands)
-end = time.time()
-print(end-start)
+
+def rock_paper_scissors_recursive(n):
+  outcomes = []
+  if len(outcomes) % 1000 == 0:
+      print(len(outcomes))
+  plays = ['rock', 'paper', 'scissors']
+
+  def find_outcome(rounds_left, result=[]):
+    if rounds_left == 0:
+      outcomes.append(result)
+      return
+    for play in plays:
+      find_outcome(rounds_left - 1, result + [play])
+
+  find_outcome(n, [])
+  return outcomes
+
+
 
 start = time.time()
-for i in range(trials):
-    rock_paper_scissors(hands)
+print(rock_paper_scissors_recursive(20))
 end = time.time()
 print(end-start)
 def rock_paper_scissors_slower(n):
